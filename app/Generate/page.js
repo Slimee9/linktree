@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, Suspense } from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSearchParams } from "next/navigation";
 
-const GenerateContent = () => {
+const Generate = () => {
 
   const searchParams = useSearchParams()
 
@@ -153,15 +153,6 @@ const GenerateContent = () => {
       </div>
     </div>
   );
-};
-
-const Generate = () => {
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <GenerateContent />
-      </Suspense>
-    );
-  };
-        
+};        
 
 export default Generate;
